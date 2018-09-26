@@ -2,9 +2,8 @@
 <html>
 <body>
 
-<h2>Using the XMLHttpRequest Object</h2>
+<h2>REST API Respose</h2>
 <div id="demo">
-<button type="button" onclick="loadXMLDoc()">Change Content</button>
 </div>
 <script>
 function loadXMLDoc() {
@@ -15,10 +14,11 @@ function loadXMLDoc() {
       this.responseText;
     }
   };
-  xhttp.open("GET", "https://xyz.com", true);// replace ur api here
-  xhttp.setRequestHeader('Authorization','Basic ' + '[username:password in base64 format]');//insert ur username and password in base64 format
+  xhttp.open("GET", "https://xyz.com/ul/latest", true);//replace ur api here
+  xhttp.setRequestHeader('Authorization','Basic ' + 'a2Vkily==');//username:password in base 64 format
   xhttp.send();
 }
+loadXMLDoc();
 </script>
 </body>
 </html>
